@@ -91,6 +91,7 @@ public class testcase {
 	        
 	        
 }catch (Exception e) {
+		    System.out.println(e);
 
 }
 		  }
