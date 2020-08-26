@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation group: 'com.github.visual-regression-tracker', name: 'sdk-java', version: '4.0.1'
+    implementation group: 'com.codeborne', name: 'selenide', version: '5.14.0'
+    implementation 'org.testng:testng:7.3.0'
+	implementation fileTree(dir: 'Jars', include: ['*.jar'])
+    compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+     
+
+}
+
+test {
+    useTestNG()
+}
